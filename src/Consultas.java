@@ -4,7 +4,6 @@ import java.time.DayOfWeek;
 import java.util.Scanner;
 
 public class Consultas {
-    boolean cerrar = false;
 
     LocalTime horario = LocalTime.now();
     LocalDate fecha = LocalDate.now();
@@ -46,8 +45,56 @@ public class Consultas {
 
     //Se puede mejorar haciendo que depede de un int diga una cosa u otra
     public void ComoEstas(){
-        System.out.println("Pues yo estoy muy contento de poder hablar contigo, y tu como estas?");
+        String consultaComoEstas;
+        int aleatoriedad = (int)(Math.random() * 4);
 
+        if (aleatoriedad == 0){
+            System.out.println("Pues yo estoy muy contento de poder hablar contigo, y tu como estas?");
+        } else if (aleatoriedad == 1){
+            System.out.println("Todo va bien por aqui, y tu como estas?");
+        } else if (aleatoriedad == 2){
+            System.out.println("Yo estoy bien gracias, y tu como estas hoy?");
+        } else if ( aleatoriedad == 3){
+            System.out.println("Estoy bastante bien ahora mismo, y tu que como te encuentas hoy?");
+        }
+
+        consultaComoEstas = sc.nextLine();
+        consultaComoEstas = consultaComoEstas.toLowerCase();
+
+        if (consultaComoEstas.contains("bien") || consultaComoEstas.contains("genial") ||
+                consultaComoEstas.contains("perfecto") || consultaComoEstas.contains("guay") ||
+                consultaComoEstas.contains("estupendo") || consultaComoEstas.contains("todo bien")){
+
+            aleatoriedad = (int)(Math.random() * 4);
+
+            if(aleatoriedad == 0){
+                System.out.println("Me alegro de que estes bien, quieres saber algo mas?");
+            } else if (aleatoriedad == 1) {
+                System.out.println("Me alegra saber que todo va bien, quieres saber algo mas?");
+            } else if (aleatoriedad == 2) {
+                System.out.println("¡Genial! Me alegra escuchar eso, quieres saber algo mas?");
+            } else if (aleatoriedad == 3) {
+                System.out.println("Perfecto, me alegro mucho por ti, quieres saber algo ams?");
+            }
+
+
+        } else if (consultaComoEstas.contains("mal") || consultaComoEstas.contains("regular") ||
+                consultaComoEstas.contains("fatal") || consultaComoEstas.contains("triste") ||
+                consultaComoEstas.contains("cansado")){
+
+            aleatoriedad = (int)(Math.random() * 4);
+
+            if(aleatoriedad == 0){
+                System.out.println("Vaya, siento oír eso. Espero que mejore pronto, quieres saber algo mas?");
+            } else if (aleatoriedad == 1) {
+                System.out.println("Animo, seguro que las cosas mejoran, quieres saber algo mas?");
+            } else if (aleatoriedad == 2) {
+                System.out.println("Lo siento, ojala poder ayudarte, quieres saber algo mas?");
+            } else if (aleatoriedad == 3) {
+                System.out.println("Vaya lo siento mucho, espero que tu día mejore pronto, quieres saber algo ams?");
+            }
+
+        }
     }
 
 

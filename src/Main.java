@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 
 void main() {
-    boolean cerrar = false;
     String pregunta = "";
 
     Scanner sc = new Scanner(System.in);
@@ -26,7 +25,7 @@ void main() {
         }
 
         if(pregunta.contains("como estas")){
-
+            consultas.ComoEstas();
         }
     }
 
