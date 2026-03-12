@@ -36,6 +36,10 @@ void main() {
         if(pregunta.contains("youtube")){
             busquedasInternet.BusquedaYoutube();
         }
+
+        if(pregunta.contains("buscar") || pregunta.contains("busca")){
+            busquedasInternet.BusquedaNavegador();
+        }
     }
 
 
