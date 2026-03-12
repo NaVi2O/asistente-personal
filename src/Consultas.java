@@ -5,17 +5,19 @@ import java.util.Scanner;
 
 public class Consultas {
 
-    LocalTime horario = LocalTime.now();
+
     LocalDate fecha = LocalDate.now();
     Scanner sc = new Scanner(System.in);
 
 
-    int hora = horario.getHour();
+
     DayOfWeek dia = fecha.getDayOfWeek();
 
     public Consultas(){}
 
     public void Saludo(){
+        LocalTime horario = LocalTime.now();
+        int hora = horario.getHour();
         if(hora >= 6 && hora< 12){
             System.out.println("Buenos dias, que deseas saber hoy?");
         } else if (hora >= 12 && hora < 20) {
@@ -96,6 +98,14 @@ public class Consultas {
 
         }
     }
+
+    public void QueHora(){
+        LocalTime horario = LocalTime.now();
+        int hora = horario.getHour();
+        System.out.println("Pues son las "+hora);
+    }
+
+
 
 
 

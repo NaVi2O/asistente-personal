@@ -6,6 +6,7 @@ void main() {
 
     Scanner sc = new Scanner(System.in);
     Consultas consultas = new Consultas();
+    BusquedasInternet busquedasInternet = new BusquedasInternet();
 
     //Hago la consulta
     System.out.println();
@@ -26,6 +27,14 @@ void main() {
 
         if(pregunta.contains("como estas")){
             consultas.ComoEstas();
+        }
+
+        if(pregunta.contains("que hora")){
+            consultas.QueHora();
+        }
+
+        if(pregunta.contains("youtube")){
+            busquedasInternet.BusquedaYoutube();
         }
     }
 
