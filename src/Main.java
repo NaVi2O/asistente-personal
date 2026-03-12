@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 void main() {
     String pregunta = "";
 
