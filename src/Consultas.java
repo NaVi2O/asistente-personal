@@ -10,7 +10,7 @@ public class Consultas {
     Scanner sc = new Scanner(System.in);
 
 
-
+    String nombre = "";
     DayOfWeek dia = fecha.getDayOfWeek();
 
     public Consultas(){}
@@ -18,12 +18,84 @@ public class Consultas {
     public void Saludo(){
         LocalTime horario = LocalTime.now();
         int hora = horario.getHour();
+        String respuesta = "";
+
+
+
         if(hora >= 6 && hora< 12){
-            System.out.println("Buenos dias, que deseas saber hoy?");
+            System.out.println("Buenos dias, puedo saber tu nombre?");
+
+            respuesta = sc.nextLine();
+            respuesta = respuesta.toLowerCase();
+
+            if (respuesta.equals("si") || respuesta.equals("sii") || respuesta.equals("siii")) {
+                System.out.println("Cual es tu nombre?");
+                nombre = sc.nextLine();
+                System.out.println("Vale,"+nombre+" a partir de ahora te llamare asi");
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
+            if (respuesta.equals("no") || respuesta.equals("noo") || respuesta.equals("nooo")) {
+                System.out.println("Necesito que me des un nombre para poder referirme a ti");
+                System.out.println("Cual es tu nombre?");
+                nombre = sc.nextLine();
+                System.out.println("Vale,"+nombre+" a partir de ahora te llamare asi");
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
+            else{
+                nombre = respuesta;
+                System.out.println("Vale a partir de ahora te llamare "+nombre);
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
+
+
         } else if (hora >= 12 && hora < 20) {
-            System.out.println("Buenas tardes, que desea saber hoy?");
+            System.out.println("Buenas tardes, puedo saber tu nombre?");
+
+            respuesta = sc.nextLine();
+            respuesta = respuesta.toLowerCase();
+
+            if (respuesta.equals("si") || respuesta.equals("sii") || respuesta.equals("siii")) {
+                System.out.println("Cual es tu nombre?");
+                nombre = sc.nextLine();
+                System.out.println("Vale,"+nombre+" a partir de ahora te llamare asi");
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
+            if (respuesta.equals("no") || respuesta.equals("noo") || respuesta.equals("nooo")) {
+                System.out.println("Necesito que me des un nombre para poder referirme a ti");
+                System.out.println("Cual es tu nombre?");
+                nombre = sc.nextLine();
+                System.out.println("Vale,"+nombre+" a partir de ahora te llamare asi");
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
+            else{
+                nombre = respuesta;
+                System.out.println("Vale a partir de ahora te llamare "+nombre);
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
         } else {
-            System.out.println("Buenas noches, que desea saber hoy?");
+            System.out.println("Buenas noches, puedo saber tu nombre?");
+
+            respuesta = sc.nextLine();
+            respuesta = respuesta.toLowerCase();
+
+            if (respuesta.equals("si") || respuesta.equals("sii") || respuesta.equals("siii")) {
+                System.out.println("Cual es tu nombre?");
+                nombre = sc.nextLine();
+                System.out.println("Vale,"+nombre+" a partir de ahora te llamare asi");
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
+            if (respuesta.equals("no") || respuesta.equals("noo") || respuesta.equals("nooo")) {
+                System.out.println("Necesito que me des un nombre para poder referirme a ti");
+                System.out.println("Cual es tu nombre?");
+                nombre = sc.nextLine();
+                System.out.println("Vale,"+nombre+" a partir de ahora te llamare asi");
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
+            else{
+                nombre = respuesta;
+                System.out.println("Vale a partir de ahora te llamare "+nombre);
+                System.out.println("Si quisieras cambiar el nombre deberas decir [cambiar nombre]");
+            }
         }
     }
 
@@ -101,10 +173,15 @@ public class Consultas {
 
     public void QueHora(){
         LocalTime horario = LocalTime.now();
+        int minuto = horario.getMinute();
         int hora = horario.getHour();
-        System.out.println("Pues son las "+hora);
+        System.out.println("Pues son las "+hora+"//"+minuto);
     }
 
+    public void CambiarNombre(){
+        System.out.println("Cual quieres que sea tu nuevo nombre? ");
+        nombre = sc.nextLine();
+    }
 
 
 

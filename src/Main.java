@@ -40,13 +40,10 @@ void main() {
         if(pregunta.contains("buscar") || pregunta.contains("busca")){
             busquedasInternet.BusquedaNavegador();
         }
+
+        if(pregunta.contains("cambiar nombre")){
+            consultas.CambiarNombre();
+        }
     }
-
-
-
-
-
-
-
 
 }
