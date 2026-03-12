@@ -117,7 +117,6 @@ public class Consultas {
         }
     }
 
-    //Se puede mejorar haciendo que depede de un int diga una cosa u otra
     public void ComoEstas(){
         String consultaComoEstas;
         int aleatoriedad = (int)(Math.random() * 4);
